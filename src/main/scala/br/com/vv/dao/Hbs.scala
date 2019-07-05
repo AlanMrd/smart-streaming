@@ -11,6 +11,7 @@ import org.apache.spark.sql.Row
 import scala.util.Random
 
 import org.apache.hadoop.hbase.HBaseConfiguration
+import br.com.vv.vo.StreamingConf
 
 object Hbs extends Serializable {
 
@@ -44,15 +45,15 @@ object Hbs extends Serializable {
   }
 
   def insertHbase(hbaseTable: Table, row: Row) {
-    val r = Random
-    val put = new Put(Bytes.toBytes(r.nextInt().toString()))
-    
-    row.schema.fieldNames.foreach{f =>
+    val put = new Put(Bytes.toBytes(row.get(1).toString()))
+
+    row.schema.fieldNames.foreach { f =>
       put.addColumn(Bytes.toBytes("dados"), Bytes.toBytes(f), Bytes.toBytes(row.getAs(f).toString()))
-      }
-    
+    }
+
     hbaseTable.put(put)
   }
+
 
   def getRowFamilyHbase(hbaseTable: String, rowKey: String, rowFamily: String) = {
     val get = new Get(Bytes.toBytes(rowKey)).addFamily(Bytes.toBytes(rowFamily))

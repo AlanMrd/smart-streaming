@@ -23,6 +23,10 @@ import org.apache.spark.sql.functions._
 import br.com.vv.dao.Hbs.getTable
 import br.com.vv.dao.Hbs.insertOnHbase
 import br.com.vv.dao.Hbs.insertHbase
+import org.apache.spark.sql.DataFrame
+
+import br.com.vv.vo.StreamingConf
+import br.com.vv.utils.BusinessTemplate
 
 object StreamTemplate extends Serializable {
 
@@ -52,8 +56,14 @@ object StreamTemplate extends Serializable {
       "security.protocol" -> "PLAINTEXTSASL",
       "enable.auto.commit" -> (false: java.lang.Boolean))
 
-    val topics = Array("TESTE_STREAMING", "TESTE_STREAMING1")
+    val topics = Array("TESTE_STREAMING", "TESTE_STREAMING1", "TESTE_STREAMING2")
 
+    val confStream = Map(
+      "TESTE_STREAMING" -> new StreamingConf("br.com.vv.main.Eva", "smartcommerce:TESTE_STREAMING"),
+      "TESTE_STREAMING1" -> new StreamingConf("br.com.vv.main.Eva", "smartcommerce:TESTE_STREAMING1"),
+      "TESTE_STREAMING2" -> new StreamingConf("br.com.vv.main.EvaCount", "smartcommerce:TESTE_STREAMING2"))
+
+      
     topics.map { topic =>
       val stream = KafkaUtils.createDirectStream[String, String](ssc, PreferConsistent, Subscribe[String, String](Array(topic), kafkaParams))
 
@@ -69,12 +79,14 @@ object StreamTemplate extends Serializable {
         val df_new = df.toDF(cols_renam: _*)
 
         val df_final = c.containsArray(c.hasArray(df_new), df_new).toDF(cols_renam: _*)
-        df_final.show()
 
-        df_final.foreachPartition { forEach =>
-          val tb = getTable("smartcommerce:" + topic)
-//          forEach.foreach(g => insertOnHbase(tb, g))
-          forEach.foreach(g => insertHbase(tb, g))
+        val p = confStream.get(topic)
+        val df_instance = p.get._connection.execute(df_final)
+        
+        df_instance.foreachPartition { forEach =>
+          val tb = getTable(p.get._nm_table)
+          forEach.foreach(g =>
+            insertHbase(tb, g))
         }
 
       }
@@ -83,4 +95,9 @@ object StreamTemplate extends Serializable {
     ssc.start()
     ssc.awaitTermination()
   }
+
+//  def executor[T <: br.com.vv.utils.BusinessTemplate](cfg: String, DfIn : DataFrame)(implicit tag: ClassTag[T]){
+//    tag.runtimeClass.getConstructor(classOf[BusinessTemplate]).newInstance(cfg).asInstanceOf[T].execute(DfIn)
+//  }
+
 }

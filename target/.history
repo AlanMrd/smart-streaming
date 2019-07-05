@@ -1,0 +1,8 @@
+assembly
+clean
+assembly
+build
+clean
+sbt update
+~
+update

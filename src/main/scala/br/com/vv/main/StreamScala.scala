@@ -67,7 +67,6 @@ object StreamScala extends Serializable {
       
       
       val df_final = c.containsArray(c.hasArray(df_new), df_new).toDF(cols_renam:_*)
-      df_final.show()
 //      df_new.foreachPartition(f =>
 //        //          f.foreach(g => println(g.getAs("rowkey"), " ", g.getAs("IdCompraEntrega"), " ",  g.getAs("IdCompra"), " ", g.getAs("IdFreteEntregaTipo"))))
 //        f.foreach(g => h.putOnHbase(g)))
