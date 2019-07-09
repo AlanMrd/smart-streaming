@@ -1,32 +1,21 @@
 package br.com.vv.main
 
+import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.SparkConf
+import org.apache.spark.sql.SQLContext
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.functions.col
+import org.apache.spark.streaming.Seconds
+import org.apache.spark.streaming.StreamingContext
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 import org.apache.spark.streaming.kafka010.KafkaUtils
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
-import org.apache.spark.streaming.{ Seconds, StreamingContext }
-import org.apache.kafka.common.serialization.StringDeserializer
-import org.apache.kafka.common.serialization.StringDeserializer
-import org.apache.spark.sql.SparkSession
-import org.apache.spark.SparkContext
-import org.apache.hadoop.hbase.client.Put
-import org.apache.hadoop.hbase.TableName
-import org.apache.hadoop.hbase.util.Bytes
-import org.apache.hadoop.hbase.HBaseConfiguration
-import br.com.vv.dao.hdfsDAO
-import br.com.vv.dao.hbaseDAO
-import org.apache.spark.sql.SQLContext
-import org.apache.spark.sql.functions.rand
-import br.com.vv.utils._
-import br.com.vv.dao.hbaseConnection._
-import org.apache.spark.sql.functions._
-import br.com.vv.dao.Hbs.getTable
-import br.com.vv.dao.Hbs.insertOnHbase
-import br.com.vv.dao.Hbs.insertHbase
-import org.apache.spark.sql.DataFrame
 
-import br.com.vv.vo.StreamingConf
-import br.com.vv.utils.BusinessTemplate
+import br.com.vv.dao.Hbs.getTable
+import br.com.vv.dao.Hbs.insertHbase
+import br.com.vv.utils.GeneratorSchema
+import br.com.vv.vo.StreamingConf2
+import br.com.vv.vo.StreamingConf2
 
 object StreamTemplate extends Serializable {
 
@@ -41,9 +30,9 @@ object StreamTemplate extends Serializable {
       .config("hive.exec.dynamic.partition.mode", "nonstrict").enableHiveSupport().getOrCreate();
 
     val sc = ss.sparkContext
-    val sqlContext = new SQLContext(sc)
+//    val sqlContext = new SQLContext(sc)
 
-    val conf = new SparkConf().setAppName("Simple Streaming Application")
+//    val conf = new SparkConf().setAppName("Simple Streaming Application")
     val ssc = new StreamingContext(sc, Seconds(10))
 
     val kafkaParams = Map[String, Object](
@@ -59,9 +48,9 @@ object StreamTemplate extends Serializable {
     val topics = Array("TESTE_STREAMING", "TESTE_STREAMING1", "TESTE_STREAMING2")
 
     val confStream = Map(
-      "TESTE_STREAMING" -> new StreamingConf("br.com.vv.main.Eva", "smartcommerce:TESTE_STREAMING"),
-      "TESTE_STREAMING1" -> new StreamingConf("br.com.vv.main.Eva", "smartcommerce:TESTE_STREAMING1"),
-      "TESTE_STREAMING2" -> new StreamingConf("br.com.vv.main.EvaCount", "smartcommerce:TESTE_STREAMING2"))
+      "TESTE_STREAMING" -> new StreamingConf2("br.com.vv.main.Eva", "smartcommerce:TESTE_STREAMING"),
+      "TESTE_STREAMING1" -> new StreamingConf2("br.com.vv.main.Eva", "smartcommerce:TESTE_STREAMING1"),
+      "TESTE_STREAMING2" -> new StreamingConf2("br.com.vv.main.EvaCount", "smartcommerce:TESTE_STREAMING2"))
 
       
     topics.map { topic =>

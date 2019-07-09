@@ -45,7 +45,7 @@ object Hbs extends Serializable {
   }
 
   def insertHbase(hbaseTable: Table, row: Row) {
-    val put = new Put(Bytes.toBytes(row.get(1).toString()))
+    val put = new Put(Bytes.toBytes(row.getAs("rowkey").toString()))
 
     row.schema.fieldNames.foreach { f =>
       put.addColumn(Bytes.toBytes("dados"), Bytes.toBytes(f), Bytes.toBytes(row.getAs(f).toString()))

@@ -7,12 +7,12 @@
 		revision="0.1"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190704165558"/>
+		date="20190708154439"/>
 	<dependencies>
 		<module organisation="org.apache.spark" name="spark-streaming-kafka-0-10_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327120906" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="223">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="9972" time="35" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-streaming-kafka-0-10_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-streaming-kafka-0-10_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-streaming-kafka-0-10_2.11/2.2.0.2.6.4.0-91/spark-streaming-kafka-0-10_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="9972" time="171" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-streaming-kafka-0-10_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-streaming-kafka-0-10_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-streaming-kafka-0-10_2.11/2.2.0.2.6.4.0-91/spark-streaming-kafka-0-10_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="default" name="streamvendas_2.11" conf="compile, runtime" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="0.1"/>
 				<artifacts>
 					<artifact name="spark-streaming-kafka-0-10_2.11" type="jar" ext="jar" status="no" details="" size="219916" time="0" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-streaming-kafka-0-10_2.11\jars\spark-streaming-kafka-0-10_2.11-2.2.0.2.6.4.0-91.jar">
@@ -24,7 +24,7 @@
 		<module organisation="org.apache.spark" name="spark-streaming_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327120636" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="222">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="9313" time="36" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-streaming_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-streaming_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-streaming_2.11/2.2.0.2.6.4.0-91/spark-streaming_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="9313" time="297" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-streaming_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-streaming_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-streaming_2.11/2.2.0.2.6.4.0-91/spark-streaming_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="default" name="streamvendas_2.11" conf="compile, runtime" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="0.1"/>
 				<artifacts>
 					<artifact name="spark-streaming_2.11" type="jar" ext="jar" status="no" details="" size="2179635" time="0" location="C:\Users\alan.miranda\.m2\repository\org\apache\spark\spark-streaming_2.11\2.2.0.2.6.4.0-91\spark-streaming_2.11-2.2.0.2.6.4.0-91.jar">
@@ -379,7 +379,7 @@
 		<module organisation="org.apache.spark" name="spark-hive_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327120942" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="164">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="18481" time="39" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-hive_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-hive_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-hive_2.11/2.2.0.2.6.4.0-91/spark-hive_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="18481" time="145" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-hive_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-hive_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-hive_2.11/2.2.0.2.6.4.0-91/spark-hive_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="default" name="streamvendas_2.11" conf="compile, runtime" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="0.1"/>
 				<artifacts>
 					<artifact name="spark-hive_2.11" type="jar" ext="jar" status="no" details="" size="1238401" time="0" location="C:\Users\alan.miranda\.m2\repository\org\apache\spark\spark-hive_2.11\2.2.0.2.6.4.0-91\spark-hive_2.11-2.2.0.2.6.4.0-91.jar">
@@ -733,7 +733,7 @@
 		<module organisation="org.apache.spark" name="spark-sql_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327120839" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="166">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="11432" time="42" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-sql_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-sql_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-sql_2.11/2.2.0.2.6.4.0-91/spark-sql_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="11432" time="113" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-sql_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-sql_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-sql_2.11/2.2.0.2.6.4.0-91/spark-sql_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="org.apache.spark" name="spark-hive_2.11" conf="default, compile, runtime, master" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<artifacts>
 					<artifact name="spark-sql_2.11" type="jar" ext="jar" status="no" details="" size="7316469" time="0" location="C:\Users\alan.miranda\.m2\repository\org\apache\spark\spark-sql_2.11\2.2.0.2.6.4.0-91\spark-sql_2.11-2.2.0.2.6.4.0-91.jar">
@@ -848,7 +848,7 @@
 		<module organisation="org.apache.spark" name="spark-catalyst_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327121136" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="169">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="7991" time="41" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-catalyst_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-catalyst_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-catalyst_2.11/2.2.0.2.6.4.0-91/spark-catalyst_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="7991" time="435" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-catalyst_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-catalyst_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-catalyst_2.11/2.2.0.2.6.4.0-91/spark-catalyst_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="org.apache.spark" name="spark-sql_2.11" conf="compile, runtime" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<artifacts>
 					<artifact name="spark-catalyst_2.11" type="jar" ext="jar" status="no" details="" size="8332996" time="0" location="C:\Users\alan.miranda\.m2\repository\org\apache\spark\spark-catalyst_2.11\2.2.0.2.6.4.0-91\spark-catalyst_2.11-2.2.0.2.6.4.0-91.jar">
@@ -975,7 +975,7 @@
 		<module organisation="org.apache.spark" name="spark-sketch_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327121036" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="168">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="3202" time="36" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-sketch_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-sketch_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-sketch_2.11/2.2.0.2.6.4.0-91/spark-sketch_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="3202" time="196" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-sketch_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-sketch_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-sketch_2.11/2.2.0.2.6.4.0-91/spark-sketch_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="org.apache.spark" name="spark-sql_2.11" conf="compile, runtime" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<caller organisation="org.apache.spark" name="spark-catalyst_2.11" conf="compile, runtime" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<artifacts>
@@ -1012,7 +1012,7 @@
 		<module organisation="org.apache.spark" name="spark-core_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327121251" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="51">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="20778" time="49" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-core_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-core_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-core_2.11/2.2.0.2.6.4.0-91/spark-core_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="20778" time="238" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-core_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-core_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-core_2.11/2.2.0.2.6.4.0-91/spark-core_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="org.apache.spark" name="spark-hive_2.11" conf="default, compile, runtime, master" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<caller organisation="org.apache.spark" name="spark-sql_2.11" conf="compile, runtime" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<caller organisation="default" name="streamvendas_2.11" conf="compile, runtime" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="0.1"/>
@@ -1089,13 +1089,13 @@
 				<artifacts>
 				</artifacts>
 			</revision>
-			<revision name="2.9.9" status="release" pubdate="20190519191232" resolver="public" artresolver="public" homepage="http://wiki.fasterxml.com/JacksonModuleScala" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)" position="45">
+			<revision name="2.9.9" status="release" pubdate="20190519191232" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/JacksonModuleScala" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)" position="45">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="4069" time="503" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.module\jackson-module-scala_2.11\ivy-2.9.9.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.module\jackson-module-scala_2.11\ivy-2.9.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.11/2.9.9/jackson-module-scala_2.11-2.9.9.pom"/>
+				<metadata-artifact status="no" details="" size="4117" time="0" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.module\jackson-module-scala_2.11\ivy-2.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.11/2.9.9/jackson-module-scala_2.11-2.9.9.pom"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="2.6.5" rev-constraint-default="2.6.5" rev-constraint-dynamic="2.6.5" callerrev="2.2.0.2.6.4.0-91"/>
 				<caller organisation="default" name="streamvendas_2.11" conf="compile, runtime" rev="2.9.9" rev-constraint-default="2.9.9" rev-constraint-dynamic="2.9.9" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jackson-module-scala_2.11" type="bundle" ext="jar" status="successful" details="" size="455093" time="1078" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.module\jackson-module-scala_2.11\bundles\jackson-module-scala_2.11-2.9.9.jar">
+					<artifact name="jackson-module-scala_2.11" type="bundle" ext="jar" status="no" details="" size="455093" time="0" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.module\jackson-module-scala_2.11\bundles\jackson-module-scala_2.11-2.9.9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.11/2.9.9/jackson-module-scala_2.11-2.9.9.jar"/>
 					</artifact>
 				</artifacts>
@@ -1677,7 +1677,7 @@
 		<module organisation="org.apache.spark" name="spark-unsafe_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327120935" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="116">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="4786" time="42" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-unsafe_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-unsafe_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-unsafe_2.11/2.2.0.2.6.4.0-91/spark-unsafe_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="4786" time="189" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-unsafe_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-unsafe_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-unsafe_2.11/2.2.0.2.6.4.0-91/spark-unsafe_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<caller organisation="org.apache.spark" name="spark-catalyst_2.11" conf="compile, runtime" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<artifacts>
@@ -1690,7 +1690,7 @@
 		<module organisation="org.apache.spark" name="spark-network-shuffle_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327121115" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="114">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="4629" time="31" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-network-shuffle_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-network-shuffle_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-network-shuffle_2.11/2.2.0.2.6.4.0-91/spark-network-shuffle_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="4629" time="113" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-network-shuffle_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-network-shuffle_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-network-shuffle_2.11/2.2.0.2.6.4.0-91/spark-network-shuffle_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<artifacts>
 					<artifact name="spark-network-shuffle_2.11" type="jar" ext="jar" status="no" details="" size="62357" time="0" location="C:\Users\alan.miranda\.m2\repository\org\apache\spark\spark-network-shuffle_2.11\2.2.0.2.6.4.0-91\spark-network-shuffle_2.11-2.2.0.2.6.4.0-91.jar">
@@ -1717,7 +1717,7 @@
 		<module organisation="org.apache.spark" name="spark-network-common_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327120948" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="112">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="5824" time="35" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-network-common_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-network-common_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-network-common_2.11/2.2.0.2.6.4.0-91/spark-network-common_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="5824" time="135" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-network-common_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-network-common_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-network-common_2.11/2.2.0.2.6.4.0-91/spark-network-common_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="org.apache.spark" name="spark-network-shuffle_2.11" conf="compile, runtime" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<artifacts>
@@ -1748,15 +1748,15 @@
 				<artifacts>
 				</artifacts>
 			</revision>
-			<revision name="2.9.9" status="release" pubdate="20190515235654" resolver="public" artresolver="public" homepage="http://github.com/FasterXML/jackson" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="47">
+			<revision name="2.9.9" status="release" pubdate="20190515235654" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="47">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="2591" time="483" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\ivy-2.9.9.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\ivy-2.9.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.9/jackson-annotations-2.9.9.pom"/>
+				<metadata-artifact status="no" details="" size="7945" time="0" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\ivy-2.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.9/jackson-annotations-2.9.9.pom"/>
 				<caller organisation="com.fasterxml.jackson.module" name="jackson-module-scala_2.11" conf="default, compile, runtime, master" rev="2.9.9" rev-constraint-default="2.9.9" rev-constraint-dynamic="2.9.9" callerrev="2.9.9"/>
 				<caller organisation="org.apache.spark" name="spark-network-common_2.11" conf="compile, runtime" rev="2.6.5" rev-constraint-default="2.6.5" rev-constraint-dynamic="2.6.5" callerrev="2.2.0.2.6.4.0-91"/>
 				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.2.3" rev-constraint-default="2.2.3" rev-constraint-dynamic="2.2.3" callerrev="2.2.3"/>
 				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.9.0" rev-constraint-default="2.9.0" rev-constraint-dynamic="2.9.0" callerrev="2.9.9"/>
 				<artifacts>
-					<artifact name="jackson-annotations" type="bundle" ext="jar" status="successful" details="" size="66897" time="1514" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.9.9.jar">
+					<artifact name="jackson-annotations" type="bundle" ext="jar" status="no" details="" size="66897" time="0" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.9.9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.9/jackson-annotations-2.9.9.jar"/>
 					</artifact>
 				</artifacts>
@@ -1787,9 +1787,9 @@
 				<artifacts>
 				</artifacts>
 			</revision>
-			<revision name="2.9.9" status="release" pubdate="20190516001018" resolver="public" artresolver="public" homepage="http://github.com/FasterXML/jackson" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="48">
+			<revision name="2.9.9" status="release" pubdate="20190516001018" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="48">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="6443" time="489" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\ivy-2.9.9.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\ivy-2.9.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.pom"/>
+				<metadata-artifact status="no" details="" size="23829" time="0" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\ivy-2.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.pom"/>
 				<caller organisation="com.fasterxml.jackson.module" name="jackson-module-scala_2.11" conf="default, compile, runtime, master" rev="2.9.9" rev-constraint-default="2.9.9" rev-constraint-dynamic="2.9.9" callerrev="2.9.9"/>
 				<caller organisation="org.apache.spark" name="spark-network-common_2.11" conf="compile, runtime" rev="2.6.5" rev-constraint-default="2.6.5" rev-constraint-dynamic="2.6.5" callerrev="2.2.0.2.6.4.0-91"/>
 				<caller organisation="com.fasterxml.jackson.module" name="jackson-module-paranamer" conf="compile, runtime" rev="2.9.9" rev-constraint-default="2.9.9" rev-constraint-dynamic="2.9.9" callerrev="2.9.9"/>
@@ -1799,7 +1799,7 @@
 				<caller organisation="io.dropwizard.metrics" name="metrics-json" conf="compile, runtime" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="3.1.2"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-hdfs" conf="default, compile, runtime, master" rev="2.2.3" rev-constraint-default="2.2.3" rev-constraint-dynamic="2.2.3" callerrev="2.7.3.2.6.4.0-91"/>
 				<artifacts>
-					<artifact name="jackson-databind" type="bundle" ext="jar" status="successful" details="" size="1348108" time="2428" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.9.9.jar">
+					<artifact name="jackson-databind" type="bundle" ext="jar" status="no" details="" size="1348108" time="0" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.9.9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar"/>
 					</artifact>
 				</artifacts>
@@ -1856,7 +1856,7 @@
 		<module organisation="org.apache.spark" name="spark-launcher_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327121129" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="109">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="6278" time="37" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-launcher_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-launcher_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-launcher_2.11/2.2.0.2.6.4.0-91/spark-launcher_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="6278" time="119" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-launcher_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-launcher_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-launcher_2.11/2.2.0.2.6.4.0-91/spark-launcher_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<artifacts>
 					<artifact name="spark-launcher_2.11" type="jar" ext="jar" status="no" details="" size="70128" time="0" location="C:\Users\alan.miranda\.m2\repository\org\apache\spark\spark-launcher_2.11\2.2.0.2.6.4.0-91\spark-launcher_2.11-2.2.0.2.6.4.0-91.jar">
@@ -1868,7 +1868,7 @@
 		<module organisation="org.apache.spark" name="spark-tags_2.11">
 			<revision name="2.2.0.2.6.4.0-91" status="release" pubdate="20180327121011" resolver="ViaVarejo" artresolver="ViaVarejo" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="110">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2269" time="39" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-tags_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-tags_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-tags_2.11/2.2.0.2.6.4.0-91/spark-tags_2.11-2.2.0.2.6.4.0-91.pom"/>
+				<metadata-artifact status="successful" details="" size="2269" time="127" location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-tags_2.11\ivy-2.2.0.2.6.4.0-91.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\org.apache.spark\spark-tags_2.11\ivy-2.2.0.2.6.4.0-91.xml.original" origin-is-local="false" origin-location="http://nexus.viavarejo.com.br/repository/hortonworks-group/org/apache/spark/spark-tags_2.11/2.2.0.2.6.4.0-91/spark-tags_2.11-2.2.0.2.6.4.0-91.pom"/>
 				<caller organisation="org.apache.spark" name="spark-sketch_2.11" conf="compile, runtime" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<caller organisation="org.apache.spark" name="spark-streaming-kafka-0-10_2.11" conf="default, compile, runtime, master" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="2.2.0.2.6.4.0-91" rev-constraint-default="2.2.0.2.6.4.0-91" rev-constraint-dynamic="2.2.0.2.6.4.0-91" callerrev="2.2.0.2.6.4.0-91"/>
@@ -2358,27 +2358,27 @@
 			</revision>
 		</module>
 		<module organisation="com.fasterxml.jackson.module" name="jackson-module-paranamer">
-			<revision name="2.9.9" status="release" pubdate="20190516002123" resolver="public" artresolver="public" homepage="https://github.com/FasterXML/jackson-modules-base" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="49">
+			<revision name="2.9.9" status="release" pubdate="20190516002123" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-modules-base" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="49">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="3851" time="606" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.module\jackson-module-paranamer\ivy-2.9.9.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.module\jackson-module-paranamer\ivy-2.9.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-paranamer/2.9.9/jackson-module-paranamer-2.9.9.pom"/>
+				<metadata-artifact status="no" details="" size="29994" time="0" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.module\jackson-module-paranamer\ivy-2.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-paranamer/2.9.9/jackson-module-paranamer-2.9.9.pom"/>
 				<caller organisation="com.fasterxml.jackson.module" name="jackson-module-scala_2.11" conf="default, compile, runtime, master" rev="2.9.9" rev-constraint-default="2.9.9" rev-constraint-dynamic="2.9.9" callerrev="2.9.9"/>
 				<artifacts>
-					<artifact name="jackson-module-paranamer" type="bundle" ext="jar" status="successful" details="" size="42883" time="1357" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.module\jackson-module-paranamer\bundles\jackson-module-paranamer-2.9.9.jar">
+					<artifact name="jackson-module-paranamer" type="bundle" ext="jar" status="no" details="" size="42883" time="0" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.module\jackson-module-paranamer\bundles\jackson-module-paranamer-2.9.9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-paranamer/2.9.9/jackson-module-paranamer-2.9.9.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
-			<revision name="2.9.9" status="release" pubdate="20190515235911" resolver="public" artresolver="public" homepage="https://github.com/FasterXML/jackson-core" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="46">
+			<revision name="2.9.9" status="release" pubdate="20190515235911" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="46">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="4060" time="489" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\ivy-2.9.9.xml" searched="true" original-local-location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\ivy-2.9.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.pom"/>
+				<metadata-artifact status="no" details="" size="23044" time="0" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\ivy-2.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.pom"/>
 				<caller organisation="com.fasterxml.jackson.module" name="jackson-module-scala_2.11" conf="default, compile, runtime, master" rev="2.9.9" rev-constraint-default="2.9.9" rev-constraint-dynamic="2.9.9" callerrev="2.9.9"/>
 				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.2.3" rev-constraint-default="2.2.3" rev-constraint-dynamic="2.2.3" callerrev="2.2.3"/>
 				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.9.9" rev-constraint-default="2.9.9" rev-constraint-dynamic="2.9.9" callerrev="2.9.9"/>
 				<caller organisation="com.microsoft.azure" name="azure-storage" conf="compile, runtime" rev="2.6.0" rev-constraint-default="2.6.0" rev-constraint-dynamic="2.6.0" callerrev="5.4.0"/>
 				<artifacts>
-					<artifact name="jackson-core" type="bundle" ext="jar" status="successful" details="" size="325632" time="2160" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.9.9.jar">
+					<artifact name="jackson-core" type="bundle" ext="jar" status="no" details="" size="325632" time="0" location="C:\Users\alan.miranda\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.9.9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar"/>
 					</artifact>
 				</artifacts>

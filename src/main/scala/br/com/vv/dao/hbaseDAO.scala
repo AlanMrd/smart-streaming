@@ -1,17 +1,13 @@
 package br.com.vv.dao
 
-import org.apache.hadoop.hbase.HBaseConfiguration
-import org.apache.hadoop.hbase.client.Connection
-import org.apache.hadoop.conf.Configuration
-import org.apache.hadoop.hbase.client.ConnectionFactory;
-import org.apache.hadoop.hbase.TableName
-import org.apache.hadoop.hbase.client.Table
 import scala.util.Random
+
+import org.apache.hadoop.hbase.HBaseConfiguration
+import org.apache.hadoop.hbase.TableName
+import org.apache.hadoop.hbase.client.ConnectionFactory
 import org.apache.hadoop.hbase.client.Put
+import org.apache.hadoop.hbase.client.Table
 import org.apache.hadoop.hbase.util.Bytes
-import org.apache.spark.sql.Dataset
-import org.apache.spark.sql.{ functions, Column, DataFrame, SQLContext }
-import org.apache.spark.sql.Dataset
 import org.apache.spark.sql.Row
 
 object hbaseConnection extends Serializable {
