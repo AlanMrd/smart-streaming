@@ -1,11 +1,12 @@
 package br.com.vv.utils
 
-import scala.util.parsing.json._
 import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.types._
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.functions.{ udf, explode }
-
+import org.apache.spark.sql.functions.col
+import org.apache.spark.sql.functions.explode
+import org.apache.spark.sql.functions.monotonically_increasing_id
+import org.apache.spark.sql.types.ArrayType
+import org.apache.spark.sql.types.StructField
+import org.apache.spark.sql.types.StructType
 
 class GeneratorSchema extends Serializable {
   def fieldsFinal(schema: StructType, prefix: String): Seq[String] = {
@@ -77,7 +78,19 @@ class GeneratorSchema extends Serializable {
     val df_col = dfnotarraycol.join(df_reduce, dfnotarraycol("index") === df_reduce("index"), "outer").drop("index")
     val renam_columns = renameColumn(df_col.columns)
 
-    df_col.toDF(renam_columns:_*).select(df_new.columns.map(x => col(x)): _*)
+    df_col.toDF(renam_columns: _*).select(df_new.columns.map(x => col(x)): _*)
+  }
+
+  def normalizeDf(dfarrayNew: DataFrame): DataFrame = {
+    val cols: Seq[String] = fieldsFinal(dfarrayNew.schema, "")
+    val cols_renam = cols.map(x => x.replace(".", "_"))
+
+    val column_names_col = cols.map(name => col(name))
+
+    val df: DataFrame = dfarrayNew.select(column_names_col: _*)
+    val df_new = df.toDF(cols_renam: _*)
+
+    containsArray(hasArray(df_new), df_new).toDF(cols_renam: _*)
   }
 
   def containsArray(hasArr: Seq[String], df: DataFrame): DataFrame = {

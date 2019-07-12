@@ -15,7 +15,8 @@ import br.com.vv.utils.GeneratorSchema
 import br.com.vv.vo.StreamingConf
 
 class StreamTemplate extends Serializable {
-  def executeStream(ssc: StreamingContext, ss: SparkSession, confStream: Map[Option[String], StreamingConf]) {
+  def executeStream(ss: SparkSession, confStream: Map[Option[String], StreamingConf]) {
+    val ssc = new StreamingContext(ss.sparkContext, Seconds(10))
     val c = new GeneratorSchema();
 
     val kafkaParams = Map[String, Object](
@@ -46,7 +47,7 @@ class StreamTemplate extends Serializable {
         val df_final = c.containsArray(c.hasArray(df_new), df_new).toDF(cols_renam: _*)
 
         val p = confStream.get(Some(topic))
-        val df_instance = p.get._connection.execute(df_final)
+        val df_instance = p.get._instance.execute(df_final)
 
         df_instance.foreachPartition { forEach =>
           val tb = getTable(p.get._nm_table)

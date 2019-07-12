@@ -1,17 +1,16 @@
 package br.com.vv.dao
 
-import scala.util.{ Failure, Success, Try }
-
-import org.apache.hadoop.hbase.TableName
-import org.apache.hadoop.hbase.client.{ Connection, ConnectionFactory, Get, Put }
-import org.apache.hadoop.hbase.util.Bytes
-import org.slf4j.LoggerFactory
-import org.apache.hadoop.hbase.client.Table
-import org.apache.spark.sql.Row
 import scala.util.Random
 
 import org.apache.hadoop.hbase.HBaseConfiguration
-import br.com.vv.vo.StreamingConf
+import org.apache.hadoop.hbase.TableName
+import org.apache.hadoop.hbase.client.ConnectionFactory
+import org.apache.hadoop.hbase.client.Get
+import org.apache.hadoop.hbase.client.Put
+import org.apache.hadoop.hbase.client.Table
+import org.apache.hadoop.hbase.util.Bytes
+import org.apache.spark.sql.Row
+import org.slf4j.LoggerFactory
 
 object Hbs extends Serializable {
 
@@ -33,7 +32,6 @@ object Hbs extends Serializable {
 
   def insertOnHbase(hbaseTable: Table, row: Row) {
     val r = Random
-
     //    row.schema.fieldNames
     val put = new Put(Bytes.toBytes(r.nextInt().toString()))
 
@@ -67,8 +65,3 @@ object Hbs extends Serializable {
     conn.close()
   }
 }
-
-//trait HBaseDAOComponent {
-//  lazy val hBaseDAO = new HBaseDAO
-//}
-//}

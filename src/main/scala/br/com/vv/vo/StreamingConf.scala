@@ -4,7 +4,7 @@ import br.com.vv.utils.BusinessTemplate
 class StreamingConf(nm_class: Option[String], nm_table: Option[String]) extends Serializable {
   val _nm_class: String = getWrapParameter(nm_class)
   val _nm_table: String = getWrapParameter(nm_table) 
-  val _connection: BusinessTemplate = StreamingConfig.getInstance
+  val _instance: BusinessTemplate = StreamingConfig.getInstance
   
   def getWrapParameter(parameter:Option[String]): String = {
     parameter match{
