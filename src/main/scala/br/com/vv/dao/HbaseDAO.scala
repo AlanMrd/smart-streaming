@@ -13,9 +13,10 @@ import org.slf4j.LoggerFactory
 
 class HbaseDAO extends DAO {
 
-  override def save(df: DataFrame) {
+  override def save(df: DataFrame) {    
     df.foreachPartition { forEach =>
-      val tb = HbaseDAO.getTable("")
+      val tb = HbaseDAO.getTable("smartcommerce:TESTE_STREAMING")
+      print(tb)
       forEach.foreach(g => HbaseDAO.insertHbase(tb, g))
     }
   }
@@ -40,7 +41,7 @@ class HbaseDAO extends DAO {
     }
 
     def insertHbase(hbaseTable: Table, row: Row) {
-      val put = new Put(Bytes.toBytes(row.getAs("rowkey").toString()))
+      val put = new Put(Bytes.toBytes(row.getAs("compra_rowkey").toString()))
 
       row.schema.fieldNames.foreach { f =>
         put.addColumn(Bytes.toBytes("dados"), Bytes.toBytes(f), Bytes.toBytes(row.getAs(f).toString()))
