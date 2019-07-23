@@ -17,7 +17,7 @@ class StreamingConf2(nm_class: String, nm_table: String) extends Serializable {
     def getInstance(): BusinessTemplate = {
       val cl = Class.forName(_nm_class).asInstanceOf[Class[_ <: br.com.vv.utils.BusinessTemplate]]
       lazy val instance = cl.newInstance()
-      println(instance)
+//      println(instance)
       instance
     }
   }

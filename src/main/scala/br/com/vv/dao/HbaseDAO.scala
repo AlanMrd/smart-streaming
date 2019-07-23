@@ -10,55 +10,60 @@ import org.apache.hadoop.hbase.util.Bytes
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.Row
 import org.slf4j.LoggerFactory
+import br.com.vv.utils.ConfigStr
 
-class HbaseDAO extends DAO {
-
-  override def save(df: DataFrame) {    
+class HbaseDAO(table: String) extends DAO {
+  val _table = table
+  print(_table)
+  override def save(df: DataFrame, confStream: ConfigStr) {
     df.foreachPartition { forEach =>
-      val tb = HbaseDAO.getTable("smartcommerce:TESTE_STREAMING")
-      print(tb)
+      val tb = HbaseDAO.getTable(_table)
+      //      print(tb)
       forEach.foreach(g => HbaseDAO.insertHbase(tb, g))
     }
   }
+
+  def getTableConf() {
+  }
 }
 
-  object HbaseDAO extends Serializable {
+object HbaseDAO extends Serializable {
 
-    @transient lazy val hBaseConfiguration = HBaseConfiguration.create()
-    @transient lazy val conn = ConnectionFactory.createConnection(hBaseConfiguration)
+  @transient lazy val hBaseConfiguration = HBaseConfiguration.create()
+  @transient lazy val conn = ConnectionFactory.createConnection(hBaseConfiguration)
 
-    val log = LoggerFactory.getLogger(getClass)
+  val log = LoggerFactory.getLogger(getClass)
 
-    def insertOrUpdateTableHbase(hbaseTable: String, put: Put) {
-      @transient lazy val table = conn.getTable(TableName.valueOf(Bytes.toBytes(hbaseTable)))
-      table.put(put)
-      table.close()
-    }
-
-    def getTable(hbaseTable: String): Table = {
-      @transient lazy val table = conn.getTable(TableName.valueOf(Bytes.toBytes(hbaseTable)))
-      table
-    }
-
-    def insertHbase(hbaseTable: Table, row: Row) {
-      val put = new Put(Bytes.toBytes(row.getAs("compra_rowkey").toString()))
-
-      row.schema.fieldNames.foreach { f =>
-        put.addColumn(Bytes.toBytes("dados"), Bytes.toBytes(f), Bytes.toBytes(row.getAs(f).toString()))
-      }
-
-      hbaseTable.put(put)
-    }
-
-    def getRowFamilyHbase(hbaseTable: String, rowKey: String, rowFamily: String) = {
-      val get = new Get(Bytes.toBytes(rowKey)).addFamily(Bytes.toBytes(rowFamily))
-      @transient lazy val table = conn.getTable(TableName.valueOf(Bytes.toBytes(hbaseTable)))
-      val ret = table.get(get)
-      table.close()
-      ret
-    }
-
-    def close(): Unit = {
-      conn.close()
-    }
+  def insertOrUpdateTableHbase(hbaseTable: String, put: Put) {
+    @transient lazy val table = conn.getTable(TableName.valueOf(Bytes.toBytes(hbaseTable)))
+    table.put(put)
+    table.close()
   }
+
+  def getTable(hbaseTable: String): Table = {
+    @transient lazy val table = conn.getTable(TableName.valueOf(Bytes.toBytes(hbaseTable)))
+    table
+  }
+
+  def insertHbase(hbaseTable: Table, row: Row) {
+    val put = new Put(Bytes.toBytes(row.getAs("compra_rowkey").toString()))
+
+    row.schema.fieldNames.foreach { f =>
+      put.addColumn(Bytes.toBytes("dados"), Bytes.toBytes(f), Bytes.toBytes(row.getAs(f).toString()))
+    }
+
+    hbaseTable.put(put)
+  }
+
+  def getRowFamilyHbase(hbaseTable: String, rowKey: String, rowFamily: String) = {
+    val get = new Get(Bytes.toBytes(rowKey)).addFamily(Bytes.toBytes(rowFamily))
+    @transient lazy val table = conn.getTable(TableName.valueOf(Bytes.toBytes(hbaseTable)))
+    val ret = table.get(get)
+    table.close()
+    ret
+  }
+
+  def close(): Unit = {
+    conn.close()
+  }
+}

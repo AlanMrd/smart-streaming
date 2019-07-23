@@ -16,6 +16,7 @@ libraryDependencies += "org.apache.hadoop" % "hadoop-hdfs" % "2.7.3.2.6.4.0-91"
 libraryDependencies += "net.liftweb" %% "lift-json" % "3.1.0-M2"
 libraryDependencies += "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.9.9"
 libraryDependencies += "org.mongodb.spark" %% "mongo-spark-connector" % "2.4.0"
+libraryDependencies += "com.google.code.gson" % "gson" % "2.8.5"
 
 libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.3",
