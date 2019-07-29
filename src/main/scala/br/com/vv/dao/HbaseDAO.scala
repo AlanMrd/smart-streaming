@@ -10,20 +10,15 @@ import org.apache.hadoop.hbase.util.Bytes
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.Row
 import org.slf4j.LoggerFactory
-import br.com.vv.utils.ConfigStr
 
 class HbaseDAO(table: String) extends DAO {
   val _table = table
-  print(_table)
-  override def save(df: DataFrame, confStream: ConfigStr) {
+
+  override def save(df: DataFrame) {
     df.foreachPartition { forEach =>
       val tb = HbaseDAO.getTable(_table)
-      //      print(tb)
       forEach.foreach(g => HbaseDAO.insertHbase(tb, g))
     }
-  }
-
-  def getTableConf() {
   }
 }
 
